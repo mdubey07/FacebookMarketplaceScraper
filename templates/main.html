@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home
+{% endblock %}
+{% block content %}
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-12">
+            <h4>Please use below fields to extract list of result from FB marketplace</h4>
+            <form action="{{ url_for('item_list') }}" method="post">
+                <div class="form-row">
+                    <div class="col-md-3">
+                        <label for="category">Category</label>
+                        <input type="text" class="form-control" placeholder="Enter Category" name="category">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="loc">Location</label>
+                        <input type="text" class="form-control" placeholder="Enter location like nyc" name="loc">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="skey">Search Keyword</label>
+                        <input type="text" class="form-control" placeholder="Enter search keyword" name="skey">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="radius">Radius in KM:</label>
+                        <input type="text" class="form-control" placeholder="Enter radius in KM" name="radius">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Extract</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

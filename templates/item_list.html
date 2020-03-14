@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}
+    List of Fb Items
+{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col">
+            <h3>List of Scraped Item List</h3>
+{#            <p>Showing result for: {{ form_data }}</p>#}
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Location</th>
+                        <th>Search Term</th>
+                        <th>Image</th>
+                        <th>Url</th>
+                        <th>Date</th>
+                        <th>View Detail</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for row in data %}
+
+                        <tr>
+                            <td>{{ row[0] }}</td>
+                            <td>{{ row[1] }}</td>
+                            <td>{{ row[2] }}</td>
+                            <td>{{ row[3] }}</td>
+                            <td>{{ row[4] }}</td>
+                            <td>{{ row[5] }}</td>
+                            <td><img src="{{ row[6] }}" class="small-img rounded" alt="Cinque Terre"></td>
+                            <td><a href="{{ row[7] }}" target="_blank">Item Url</a></td>
+                            <td>07/03/2020</td>
+                            <td><a href="{{ row[7] }}" class="btn btn-info" role="button">View more</a></td>
+                        </tr>
+
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

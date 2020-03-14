@@ -1,0 +1,11 @@
+venv/*
+*.csv
+*.xlsx
+*.json
+.idea/*
+*.jpg
+*.png
+*.yml
+*.pyc
+scrapy/project.egg-info/*
+scrapy/build/*

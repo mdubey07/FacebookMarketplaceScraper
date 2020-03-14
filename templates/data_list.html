@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home
+{% endblock %}
+{% block content %}
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-12">
+            <h2>Scraped Item data List</h2>
+            <h4>Please click on any list to see scraped result</h4>
+
+            <div class="list-group">
+{#                <a href="#" class="list-group-item list-group-item-action">First item</a>#}
+                <a href="#" class="list-group-item d-flex list-group-item-action justify-content-between align-items-center">
+                    Item List 1
+                    <span class="badge badge-primary badge-pill">12</span>
+                </a>
+                <a href="#" class="list-group-item d-flex list-group-item-action justify-content-between align-items-center">
+                    Item List 2
+                    <span class="badge badge-primary badge-pill">50</span>
+                </a>
+                <a href="#" class="list-group-item d-flex list-group-item-action justify-content-between align-items-center">
+                    Item List 3
+                    <span class="badge badge-primary badge-pill">99</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
